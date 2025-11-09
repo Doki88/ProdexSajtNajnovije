@@ -31,7 +31,7 @@ export default function Products(){
      //pagination functionality
      const [currentPage, setCurrentPage] = useState(1)
      const [totalPages, setTotalPages] = useState(1)
-     const pageSize = 70
+     const pageSize = 90
 
     // search functionality
     const [searchValue, setSearchValue] = useState("")
