@@ -1,0 +1,184 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Top and bottom div */
+  .topContact,
+  .bottom,
+  .formTitle {
+    width: 80%; /* Centered with some space on each side */
+    background-color: #ccc;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  .formMessageTitle {
+    width: 80%; /* Centered with some space on each side */
+    background-color: white;
+    /* height: 200px; */
+    margin-bottom: 10px;
+  }
+  .formMessageDescription {
+    width: 80%; /* Centered with some space on each side */
+    background-color: #ccc;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  .formMessageButton {
+    width: 80%; /* Centered with some space on each side */
+    background-color: white;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  .topContact {
+    
+    padding-left: 10px;
+    height: 50px;
+    background-color: white;
+    border-left: 3px solid #03fcad;
+
+  }
+  .formTitle {
+    padding-left: 10px;
+    height: 50px;
+    background-color: white;
+    border-left: 3px solid #03fcad;
+  }
+  .formMessageTitle {
+    /* padding-left: 10px; */
+    height: 30px;
+  }
+ 
+  .formMessageButton {
+    height: 55px;
+  }
+  
+  /* Container for middle boxes */
+  .middle {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Same as top/bottom width */
+    margin-bottom: 20px;
+  }
+  .formMiddle {
+        display: flex;
+        justify-content: space-between;
+        width: 80%; /* Same as top/bottom width */
+        margin-bottom: 10px;      
+  }
+  
+  .box {
+    width: calc((100% - 20px) / 3);  
+    background-color: white;
+    height: 70px;
+    padding-left: 10px;
+  }
+
+  .formBox {
+    width: calc((100% - 20px) / 3); 
+    background-color: white;
+    height: 30px;
+    
+  }
+  .bottom {
+    padding-left: 10px;
+    font-size: 13px;
+    background-color: white;
+    height: 20px;
+  }
+
+  .map-container {
+  width: 80%;
+  margin: 30px auto 20px auto;
+  border: 3px solid #03fcad;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+  /* Mobile view: stack everything vertically */
+  @media (max-width: 768px) {
+    .middle {
+      flex-direction: column;
+      width: 80%; /* Keep same width on mobile */
+    }
+    .formMiddle {
+        flex-direction: column;
+        width: 80%; /* Keep same width on mobile */
+      }
+  
+    .box {
+      width: 100%;
+      margin-bottom: 10px;
+  
+     }
+    .formBox {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .topContact, .bottom, .formTitle, .formMessageTitle, .formMessageDescription, .formMessageButton {
+      width: 80%;
+    }
+  }
+
+.flex-container-two-contact{
+    text-align: left;
+    justify-self: flex-start;
+    /* margin-bottom: 5px; */
+ }
+.flex-container-two-text-contact{
+    border-top: 3px solid #03fcad;
+    text-align: left;
+    font-size: 13px;
+    padding-top: 5px;
+}
+.flex-container-two-multi-contact{
+    display: flex;
+    border-top: 3px solid #03fcad;
+    /* padding-top: 5px; */
+}
+
+.flex-container-two-text-multi-contact {
+    text-align: left;
+    margin-right: 19%;
+    font-size: 13px;
+    padding-top: 5px;
+ }
+
+ .flex-container-two-contact {
+    text-align: left;
+    justify-self: flex-start
+}
+
+.firstrow-data {
+    width: 100%;
+    border: 2px solid #03fcad;;
+}
+
+.message-title-input {
+    width: 100%;
+    border: 2px solid #03fcad;;
+}
+.text-area-data {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #03fcad;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+}
+
+.formMessageButton button {
+    background-color: #03fcad;
+    border: none;
+    color: white;
+    padding: 15px 44px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    
+  }

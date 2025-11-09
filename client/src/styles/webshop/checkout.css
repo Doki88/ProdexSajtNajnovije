@@ -1,0 +1,24 @@
+.checkout-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+.payment-methods {
+  margin: 20px 0;
+}
+
+.payment-methods label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.confirm-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

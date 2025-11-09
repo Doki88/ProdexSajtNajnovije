@@ -1,0 +1,19 @@
+ .carouselContainer {
+     width: 70%;
+     margin-left: 14%;
+     margin-top: 5%;
+     margin-bottom: 5%;
+ }
+
+ .card {
+
+   
+  margin-left: 12px;
+  }
+
+ .carousel-text {
+  margin-left: 14%;
+  border-left: 2px solid #03fcad;
+  padding-left: 10px;
+
+ }

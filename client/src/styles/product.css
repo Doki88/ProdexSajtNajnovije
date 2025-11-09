@@ -1,0 +1,164 @@
+.mainContainer{
+    margin-left: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.upperContainer {  
+    display: flex;
+    
+ 
+  } 
+.upperContainer > div{
+    margin-left: 20px;
+}
+
+/* Add this to product.css */
+
+.imageContainer1 img,
+.imageContainer2 img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.imageContainer1 img:hover,
+.imageContainer2 img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+
+.imageContainer1{
+    border: 2px solid #03fcad;
+}
+
+.imageContainer2{
+    border: 2px solid #03fcad;
+}
+ 
+ 
+
+.descriptionContainer {
+    margin-left: 20px;
+    margin-right: 180px;
+    margin-top: 30px;
+   
+
+}
+
+.descriptionTitle {
+    border: 2px solid #03fcad;
+    padding: 5px;
+}
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #03fcad;
+    height: 40px;
+    background-color: #929694;
+    padding-left: 10px;
+}
+.titleContainer{
+    width: 300px;
+}
+.priceRed {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #03fcad;
+    height: 40px;
+    background-color: #e7f1ec;
+    padding-left: 10px;
+}
+.features {
+    margin-top: 5px;
+     
+}
+.featureRed {
+    color:rgb(0, 60, 255)
+}
+
+.videoContainer {
+    margin-top: 10px;
+}
+
+.imageContainer2, .videoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 0; /* optional: align with other elements */
+    border: 2px solid #03fcad;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .upperContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .upperContainer > div {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .titleContainer {
+    width: 100%;
+  }
+
+  .imageContainer1,
+  .imageContainer2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imageContainer1 img,
+  .imageContainer2 img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .product-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quantity-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .quantity-selector input {
+    width: 60px;
+    text-align: center;
+  }
+
+  .add-to-cart-btn {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .added-message {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+  }
+}

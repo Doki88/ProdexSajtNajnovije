@@ -1,0 +1,127 @@
+/* === Registration Page Styles === */
+.registration-wrapper {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.registration-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  gap: 15px;       
+  padding-left: 10px;
+}
+
+.form-group label {
+  flex: 0 0 auto;      
+  width: auto;         
+  text-align: left;     
+  flex: 0 0 120px;  
+  text-align: right;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  flex: 1;
+  max-width: 100%;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+.registration-page {
+  max-width: 500px;
+  margin: 100px auto 80px auto;
+  padding: 30px 40px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-page h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.registration-page form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-page label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.registration-page input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.registration-page input:focus {
+  border-color: #03fcad;
+  outline: none;
+}
+
+.registration-page button {
+  padding: 12px;
+  background-color: #03fcad;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registration-page button:hover {
+  background-color: #02e6a1;
+}
+
+.registration-page p {
+  margin-top: 10px;
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .registration-page {
+    padding: 20px;
+    margin: 30px 15px;
+  }
+
+  .registration-page input,
+  .registration-page button {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .registration-page {
+    margin: 60px 20px 60px 20px; /* smaller spacing on mobile */
+    padding: 30px 20px;
+  }
+}
+

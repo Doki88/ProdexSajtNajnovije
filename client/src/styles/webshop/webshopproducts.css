@@ -1,0 +1,247 @@
+/* Layout Container */
+.products-container {
+  display: flex;
+}
+
+.products-main-box {
+  margin-left: 70px;
+}
+
+.products-container {
+  background-color: gold;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: white;
+  padding: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 20px;
+}
+
+/* Product Card - Merged definition */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  min-height: 420px; /* Ensure consistent height even with long titles */
+}
+
+/* Product Item */
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Product Image */
+.product-image,
+.product-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+/* Product Title Link */
+.product-name-link {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.2s ease;
+  display: block;
+  width: 100%;
+}
+
+.product-name-link:hover {
+  color: #0056b3;
+}
+
+/* Product Title Truncation */
+.product-name-link h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+
+  line-height: 1.5em;
+  max-height: 4.5em; /* 3 lines × 1.5em */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Price Display */
+.sifra {
+  color: #1352ff;
+}
+
+/* Price Negative (custom case) */
+.priceNegative {
+  color: red;
+}
+
+/* Buttons */
+.add-to-cart-btn {
+  margin-top: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #218838;
+}
+
+/* Misc Utility */
+.details-btn {
+  background-color: #03fcad;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Header */
+.title-products1 {
+  border-left: 2px solid #03fcad;
+  margin-left: 10px;
+  padding-left: 10px;
+  height: 90px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.title-filters-box1 {
+  margin-left: 1%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+/* Filters */
+.brand-filters1 {
+  display: flex;
+  float: right;
+  position: absolute;
+  margin-left: 670px;
+}
+
+.brand-filter1 {
+  margin-left: 10px;
+}
+
+.filterBlock,
+.searchContainer,
+.brandFil {
+  margin-top: 20px;
+}
+
+.brandFil {
+  margin-top: 45px;
+}
+
+.searchContainer {
+  margin-top: 45px;
+}
+
+/* Pagination */
+.pagination {
+  margin-left: 20px;
+}
+
+.page-item-active {
+  background-color: red;
+  font-size: 50px;
+}
+
+/* Three Block Header Layout */
+.three-blocks-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+}
+
+.block {
+  flex: 1;
+  border-radius: 8px;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .three-blocks-container {
+    flex-direction: column;
+  }
+
+  .search input {
+    padding: 5px 10px;
+    border-radius: 4px;
+    width: 100px;
+    border: 1px solid #ccc;
+  }
+}
+
+/* Search Box Styles */
+.searchInBrand {
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  order: 3;
+  margin-top: 20px;
+}
+
+.searchInBrand input {
+  width: 200px;
+}
+
+.search input {
+  padding: 5px 10px;
+  border-radius: 4px;
+  width: 300px;
+  border: 1px solid #ccc;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .title-products1 {
+    font-size: 24px; /* or whatever fits nicely */
+  }
+}
