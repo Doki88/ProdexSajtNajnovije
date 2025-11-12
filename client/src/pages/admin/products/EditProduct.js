@@ -18,6 +18,8 @@ export default function EditProduct(){
     const [category, setCategory] = useState("")
     //const [file, setFile] = useState(null);
     const [files, setFiles] = useState([]);
+    const [isNewProduct, setIsNewProduct] = useState(false);
+    const [isOnAction, setIsOnAction] = useState(false);
 
     const [catalogs, setCatalogs] = useState([])  
 
@@ -40,6 +42,8 @@ export default function EditProduct(){
                 
                
                 setInitialData(data)
+                setIsNewProduct(data.proizvodJeNov)
+                setIsOnAction(data.proizvodJeNaAkciji)
                 setCatalog(data.brand);
             })
             .catch(error => {
@@ -105,6 +109,8 @@ export default function EditProduct(){
         formNew.append("price", product.price);
         formNew.append("description", product.description);
         formNew.append("serialNumber", product.serialNumber);
+        formNew.append("isNewProduct", isNewProduct);
+        formNew.append("isOnAction", isOnAction);
         //formNew.append("imagename", product.image.name);
         formNew.append("id", productId);
 
@@ -256,13 +262,29 @@ export default function EditProduct(){
 
                 
 
-                        {/* <div className="row mb-3">
-                            <label className="col-sm-4 col-form-label">Created At</label>
-                            <div className="offeset-sm-4 col-sm-8">
-                                <input readOnly className="form-control-plaintext" 
-                                    defaultValue={initialData.createdAt.slice(0,10)}/>
+                                       <div className="row mb-3">
+                            <label className="col-sm-4 col-form-label">Novi Proizvod</label>
+                            <div className="col-sm-8 d-flex align-items-center">
+                                <input
+                                type="checkbox"
+                                checked={isNewProduct}
+                                onChange={(e) => setIsNewProduct(e.target.checked)}
+                                style={{ width: "22px", height: "22px", cursor: "pointer" }}
+                                />
                             </div>
-                        </div> */}
+                        </div>
+
+                        <div className="row mb-3">
+                            <label className="col-sm-4 col-form-label">Na akciji</label>
+                            <div className="col-sm-8 d-flex align-items-center">
+                                <input
+                                type="checkbox"
+                                checked={isOnAction}
+                                onChange={(e) => setIsOnAction(e.target.checked)}
+                                style={{ width: "22px", height: "22px", cursor: "pointer" }}
+                                />
+                            </div>
+                        </div>
 
                         <div className="row">
                             <div className="offeset-sm-4 col-sm-4 d-grid">

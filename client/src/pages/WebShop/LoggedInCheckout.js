@@ -27,9 +27,12 @@ const LoggedInCheckout = () => {
 
     const { _id, email, firstname, lastname, companyName, city, address, phoneNumber, role} = userCredentials || {};
       
+      const url = process.env.NODE_ENV === 'production'
+          ? "https://prodexmd.ba/api/orders/"
+          : "http://localhost:5000/api/orders/";
      try {
       //const response = await fetch("http://localhost:5000/api/orders/", {  
-      const response = await fetch("https://prodexmd.ba/api/orders/", {
+      const response = await fetch(url, {
         method: "POST",
           headers: {
           "Content-Type": "application/json",

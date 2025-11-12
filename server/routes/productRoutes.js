@@ -346,8 +346,8 @@ productRoutes.get('/', asyncHandler(async (req, res) => {
 
             // Slice the sorted array for pagination
     products = allProducts.slice(startIndex, endIndex);
-    console.log('evo producata:')
-    console.log(products)
+    // console.log('evo producata:')
+    // console.log(products)
     } else {
         // Normal paginated query
         totalCount = await Product.countDocuments(query);

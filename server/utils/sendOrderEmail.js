@@ -120,7 +120,7 @@ const sendOrderEmail = async ({ ime, prezime, kompanija, email, adresa, telefon,
       <tr>
         <td style="text-align:center;">${index + 1}</td>
         <td>${item.serialNumber}</td>
-        <td>${item.name}</td>
+        <td>${item.name.replace(/^\d+\)\s*/, "")}</td>
         <td style="text-align:center;">${item.quantity}</td>
         <td style="text-align:right;">${itemPrice}</td>
         <td style="text-align:right;">${itemTotal}</td>

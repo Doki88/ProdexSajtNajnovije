@@ -195,8 +195,8 @@ app.put('/api/upload',  upload.array('images', 10), asyncHandler(async (req, res
      const price = parseFloat(req.body.price);
      const description = req.body.description;
      const serialNumber = req.body.serialNumber;
-     const proizvodJeNov = req.body.proizvodJeNov;
-     const proizvodJeNaAkciji = req.body.proizvodJeNaAkciji;
+     const proizvodJeNov = req.body.isNewProduct;
+     const proizvodJeNaAkciji = req.body.isOnAction;
 
      console.log('evo ga sade:')
      console.log(proizvodJeNaAkciji)

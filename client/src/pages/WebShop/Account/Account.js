@@ -26,14 +26,14 @@ const Account = () => {
     return sum;
   }, 0);
 
-  if (cartItems.length === 0) {
-    return (
-      <div className="cart-container">
-        <h2>Vaša korpa je prazna 🛒</h2>
-        <Link to="/webshopproducts" className="continue-shopping">↩ Nastavi kupovinu</Link>
-      </div>
-    );
-  }
+  // if (cartItems.length === 0) {
+  //   return (
+  //     <div className="cart-container">
+  //       <h2>Vaša korpa je prazna 🛒</h2>
+  //       <Link to="/webshopproducts" className="continue-shopping">↩ Nastavi kupovinu</Link>
+  //     </div>
+  //   );
+  // }
 
   return (
     <>

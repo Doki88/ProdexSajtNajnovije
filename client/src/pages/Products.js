@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { useParams, Link, useLocation } from "react-router-dom"
+import { useParams, Link, useLocation, useNavigate } from "react-router-dom"
  
 // import BottomSlider from "./common/BottomSlider"
 import "../styles/webshop/webshopproducts.css"
@@ -138,12 +138,24 @@ export default function Products(){
 
 
 
+   // 👇 keep this simple: only fetch products
     useEffect(() => {
-    // if (brand) {
-    //     getProducts();
-    // }
-     getProducts();
-}, [brand, currentPage, searchValue]);
+    getProducts();
+    }, [brand, currentPage, searchValue]);
+
+    // 👇 NEW EFFECT — restore scroll after products render
+    useEffect(() => {
+    if (products.length > 0) {
+        const savedPosition = sessionStorage.getItem("scrollPosition");
+        if (savedPosition) {
+        // Wait a tiny bit for the DOM to paint
+        requestAnimationFrame(() => {
+            window.scrollTo(0, parseInt(savedPosition, 10));
+            sessionStorage.removeItem("scrollPosition");
+        });
+        }
+    }
+    }, [products]);
     //console.log(products)
       // pagination functionlity
     let pagintationButtons = []
@@ -231,28 +243,36 @@ async function findCatalogById(id) {
 function ProductItem({product}){
     const { addToCart } = useContext(AppContext);
     const [added, setAdded] = useState(false);
+    const navigate = useNavigate();
 
-     const handleAddToCart = () => {
+    const handleAddToCart = () => {
         addToCart(product);
         setAdded(true);
         setTimeout(() => setAdded(false), 2000); // remove feedback after 2s
+    };
+     const handleProductClick = (e) => {
+        e.preventDefault();
+        // Save scroll position
+        sessionStorage.setItem("scrollPosition", window.scrollY);
+        // Navigate to product detail
+        navigate(`/products1/${product._id}`);
     };
 
 
     return(
         <div className="product-item">
-            <Link to={`/products1/${product._id}`} className="product-name-link">
+              <a href={`/products1/${product._id}`} onClick={handleProductClick} className="product-name-link">
                  <h4>{product.name}</h4> 
-            </Link>
-           <Link to={`/products1/${product._id}`}>
+            
+            
                 <img
                     src={product.image1}
                     className="img-fluid"
                     alt={product.name}
                     style={{ height: "220px", objectFit: "contain" }}
                 />
-            </Link>
-
+            
+             </a>
             <hr />
             { product.description === "pometru" &&
                 <h4>{product.price}KM/1m</h4>           
