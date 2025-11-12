@@ -291,7 +291,7 @@ const productRoutes = express.Router();
 // GET /api/products
 // GET /api/products
 productRoutes.get('/', asyncHandler(async (req, res) => {
-    console.log('evo me u ovom getu');
+    //console.log('evo me u ovom getu');
 
     const {
         page = 1,
@@ -334,7 +334,7 @@ productRoutes.get('/', asyncHandler(async (req, res) => {
 
     // Special case: Materijal za klimu
     if (brand === 'MATERIJAL ZA MONTAŽU I SERVIS KLIMA UREĐAJA I RASHLADNIH SISTEMA') {
-        console.log('evo me boco')
+        // console.log('evo me boco')
           // Get all products of that brand, sorted by name (alphabetically)
             const allProducts = await Product.find
             ({ brand: 'MATERIJAL ZA MONTAŽU I SERVIS KLIMA UREĐAJA I RASHLADNIH SISTEMA' })

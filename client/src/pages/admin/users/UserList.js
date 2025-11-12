@@ -51,7 +51,7 @@ export default function UserList(){
         })
         .then(data => {
 
-            console.log("API data received:", data)
+            //console.log("API data received:", data)
            
             const filtered = userRoleFilter
                 ? data.filter(user => {
@@ -300,7 +300,7 @@ export default function UserList(){
                                      
                                     <td style={{width: "10px", whiteSpace: "nowrap"}}>
                                         <Link className="btn btn-primary btn-sm me-1"
-                                            to={"/admin/products/edit/" + user._id }>Prikazi</Link>
+                                            to={"/admin/users/" + user._id }>Prikazi</Link>
                                         <button type="button" className="btn btn-danger btn-sm"
                                             onClick={() => deleteProduct(user._id)}>Obrisi</button>
                                     </td>

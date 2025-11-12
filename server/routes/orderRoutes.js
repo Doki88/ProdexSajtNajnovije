@@ -122,8 +122,6 @@ const createOrder = async (req, res) => {
 
     
 	const data = req.body;
-
-  console.log('evo me u orderu ba')
 //   console.log(data.cartItems)
 
   const totalPrice = Number(
@@ -170,8 +168,6 @@ const createOrder = async (req, res) => {
 				cartItems: data.cartItems
 			});
 		} else if(data.userInfo.role === 'kompanija'){
-
-			    console.log('evo me')
 				await sendOrderEmail({
 				kompanija: data.userInfo.companyName,
 				email: data.userInfo.email,
@@ -180,7 +176,7 @@ const createOrder = async (req, res) => {
 				placanje: data.paymentMethod,
 				cartItems: data.cartItems 
 				});
-				console.log('poslao sam')
+				//console.log('poslao sam')
 
 				await sendOrderEmailToProdex({
 					kompanija: data.userInfo.companyName,

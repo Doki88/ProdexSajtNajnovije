@@ -65,7 +65,7 @@ export default function OrderView() {
       </table>
 
        <div className="mb-3">
-        <strong>Ukupno:</strong> {order.totalPrice}
+        <strong>Ukupno:</strong> {order.totalPrice} KM
       </div>
     </div>
   );

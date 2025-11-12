@@ -211,10 +211,37 @@ const getUsers = async (req, res) => {
   res.json(users);
 };
 
+// GET /api/users/:id — get single user
+const getUser = asyncHandler(async (req, res) => {
+  // console.log('trazim usera')
+  const user = await User.findById(req.params.id).select('-password'); // exclude password
+
+  
+  if (user) {
+    res.json(user);
+  } else {
+    res.status(404);
+    throw new Error('User not found');
+  }
+});
+
+// DELETE /api/users/:id — delete user
+const deleteUser = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.params.id);
+
+  if (user) {
+    await user.deleteOne();
+    res.json({ message: 'User deleted successfully' });
+  } else {
+    res.status(404);
+    throw new Error('User not found');
+  }
+});
+
 
 userRoutes.put('/', asyncHandler(async (req, res) => {
 
-    console.log('ovde sam jarane')
+    //console.log('ovde sam jarane')
  
     try {
 
@@ -249,5 +276,9 @@ userRoutes.put('/', asyncHandler(async (req, res) => {
 userRoutes.route('/login').post(loginUser);
 userRoutes.route('/register').post(registerUser);
 userRoutes.route('/').get(protectRoute, admin, getUsers);
+userRoutes
+  .route('/:id')
+  .get(protectRoute, admin, getUser)
+  .delete(protectRoute, admin, deleteUser);
   
  module.exports = userRoutes;

@@ -43,6 +43,7 @@ import Account from './pages/WebShop/Account/Account';
 import Orders from './pages/WebShop/Account/Orders';
 import ClientOrderView from './pages/WebShop/Account/ClientOrderView';
 import EditAccount from './pages/WebShop/Account/EditAccount';
+import UserDetails from './pages/admin/users/UserDetails';
  
 
 
@@ -180,6 +181,11 @@ function App(){
                        <Route path="/admin/users" element={
                        <ProtectedRoute>
                           <UserList />
+                      </ProtectedRoute>
+                    } />
+                     <Route path="/admin/users/:id" element={
+                       <ProtectedRoute>
+                          <UserDetails />
                       </ProtectedRoute>
                     } />
 

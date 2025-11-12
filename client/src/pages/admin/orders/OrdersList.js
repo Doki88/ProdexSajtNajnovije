@@ -58,7 +58,7 @@ export default function OrderList(){
         })
         .then(data => {
 
-            console.log("API data received:", data)
+            //console.log("API data received:", data)
            
             const filteredData = userTypeFilter
                 ? data.filter(order => order.userType === userTypeFilter)
@@ -257,30 +257,11 @@ export default function OrderList(){
             <table className="table">
                 <thead>
                     <tr>
-                        {/* <th style={{ cursor: "pointer"}} onClick={() => sortTable("id")}>
-                            ID <SortArrow column ="id" sortColumn={sortColumn.column} orderBy={sortColumn.orderBy}/>
-                        </th> */}
+                       
                         <th style={{ cursor: "pointer"}} onClick={() => sortTable("name")}>
                             Kupac <SortArrow column ="name" sortColumn={sortColumn.column} orderBy={sortColumn.orderBy}/>
                         </th>
-                        {/* <th style={{ cursor: "pointer"}} onClick={() => sortTable("brand")}>
-                            Katalog <SortArrow column ="brand" sortColumn={sortColumn.column} orderBy={sortColumn.orderBy}/>
-                        </th>
-                        <th style={{ cursor: "pointer"}} onClick={() => sortTable("category")}>
-                            Šifra <SortArrow column ="serialNumber" sortColumn={sortColumn.column} orderBy={sortColumn.orderBy}/>
-                        </th>
-                        <th style={{ cursor: "pointer"}} onClick={() => sortTable("price")}>
-                            Cena <SortArrow column ="price" sortColumn={sortColumn.column} orderBy={sortColumn.orderBy}/>
-                        </th> */}
-                        {/* <th >
-                            Image
-                        </th>
-                        <th style={{ cursor: "pointer"}} onClick={() => sortTable("createdAt")}>
-                            Created At <SortArrow column ="createdAt" sortColumn={sortColumn.column} orderBy={sortColumn.orderBy}/>
-                        </th> */}
-                        {/* <th style={{ cursor: "pointer"}}>
-                            Action
-                        </th> */}
+                      
                     </tr>
                 </thead>
                 <tbody>

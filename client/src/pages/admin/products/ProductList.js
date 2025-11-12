@@ -48,7 +48,7 @@ export default function ProductList(){
         })
         .then(data => {
 
-            console.log("API data received:", data)
+            //console.log("API data received:", data)
            
             setProducts(data.products)
             
