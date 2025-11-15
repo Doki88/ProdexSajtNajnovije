@@ -6,8 +6,7 @@ import GallerySlider from "./GallerySlider"
 export default function About(){
     return (
         <>
-            <Slideshow/>
-
+            
             <div className="grid-container">
                 <div className="grid-item">
                      <div className="text-box">
@@ -48,13 +47,13 @@ export default function About(){
 
 
             <div className="box-containerLower">
-                <div className="boxLower"> <img src="/images/home/Colosseum_11-7-2003.jpg"
+                <div className="boxLower"> <img src="/images/catalogs/lselectric.jpg"
                             alt="hero"/>  </div>
-                <div className="boxLower"> <img src="/images/home/Colosseum_11-7-2003.jpg"
+                <div className="boxLower"> <img src="/images/catalogs/MC-22b AC.webp"
                             alt="hero"/>  </div>
-                <div className="boxLower"> <img src="/images/home/Colosseum_11-7-2003.jpg"
+                <div className="boxLower"> <img src="/images/catalogs/xmta-608.jpg"
                             alt="hero"/>  </div>
-                <div className="boxLower"> <img src="/images/home/Colosseum_11-7-2003.jpg"
+                <div className="boxLower"> <img src="/images/catalogs/Tehnoin009 2025-07-24 210213.png"
                             alt="hero"/>  </div>
                  </div>
          </>

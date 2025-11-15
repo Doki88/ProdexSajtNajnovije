@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import "../styles/galerySlider.css"
     
 const images = [
-    '/images/home/Colosseum_11-7-2003.jpg',
-    '/images/home/Na_Koloseum_i_K_Franciszki_Rzymianki.jpg',
-    '/images/home/Roma_(2005).jpg',
-    '/images/home/Roma_Piazza_Venezia.jpg',
-    '/images/home/Roma-prati.jpg',
+    '/images/catalogs/6013.webp',
+    '/images/catalogs/5566.jpg',
+    '/images/catalogs/rezervniDijeloi.jpg',
+    '/images/catalogs/optakatalog.jpg',
+    '/images/catalogs/Pl sporet.png',
   ];
     const GallerySlider = () => {
       const [currentIndex, setCurrentIndex] = useState(0);

@@ -42,9 +42,18 @@ export default function EditProduct(){
                 
                
                 setInitialData(data)
+               
                 setIsNewProduct(data.proizvodJeNov)
                 setIsOnAction(data.proizvodJeNaAkciji)
+
                 setCatalog(data.brand);
+
+                if(data.proizvodJeNov  === undefined) {
+                    setIsNewProduct(false)
+                }
+                if(data.proizvodJeNaAkciji  === undefined) {
+                    setIsOnAction(false)
+                }
             })
             .catch(error => {
                 alert("Unable to read the product details")

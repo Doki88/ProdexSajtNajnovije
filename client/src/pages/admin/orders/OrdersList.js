@@ -76,10 +76,22 @@ export default function OrderList(){
 
     useEffect(getOrders, [currentPage, search, sortColumn, userTypeFilter]);
 
-    function deleteProduct(id) { 
-        if (window.confirm("Da zi želite da obrišete ovaj artikal? ")) {
-            //fetch( `http://localhost:5000/api/products/${id}`, { method: 'DELETE' })
-            fetch( `https://prodexmd.ba/api/products/${id}`, { method: 'DELETE' })
+    function deleteOrder(id) { 
+
+        const url = process.env.NODE_ENV === 'production'
+          ? "https://prodexmd.ba/api/orders/"
+          : "http://localhost:5000/api/orders/";
+        if (window.confirm("Da zi želite da obrišete ovu narudžbu? ")) {
+          
+            
+
+           fetch(url + id, {
+                method: 'DELETE', 
+                headers: {
+                    'Authorization': `Bearer ${userCredentials?.token}`,
+                    'Content-Type': 'application/json'
+                }
+             })
             .then(async response => {
                 const data = await response.json();
                  // check for error response
@@ -276,7 +288,7 @@ export default function OrderList(){
                                         <Link className="btn btn-primary btn-sm me-1"
                                             to={"/admin/orders/view/" + order._id }>Prikazi</Link>
                                         <button type="button" className="btn btn-danger btn-sm"
-                                            onClick={() => deleteProduct(order._id)}>Obrisi</button>
+                                            onClick={() => deleteOrder(order._id)}>Obrisi</button>
                                     </td>
                                 </tr>
                             )
