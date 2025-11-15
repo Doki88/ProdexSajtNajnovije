@@ -71,8 +71,8 @@ const transporter = nodemailer.createTransport({
     // from: "prodexns@gmail.com",
     // to: "prodexns@gmail.com",
     from: "prodexmd@yahoo.com",
-    to: "prodexmd@yahoo.com",
-    //  to: ["prodexmd@yahoo.com", "dexpro988@gmail.com", "orders@company.com"],
+    // to: "prodexmd@yahoo.com",
+    to: ["prodexmd@yahoo.com", "dexpro988@gmail.com"],
     subject: 'Narudzba',
     html: `
 
